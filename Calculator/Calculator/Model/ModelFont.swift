@@ -13,10 +13,3 @@ enum OrbitronType: String {
     case extraBold = "Orbitron-ExtraBold"
     case black = "Orbitron-Black"
 }
-
-
-extension UIFont {
-    static func getCustomFont(fontType: OrbitronType = .regular, size: CGFloat = 16) -> UIFont {
-        .init(name: fontType.rawValue, size: size) ?? .systemFont(ofSize: size)
-    }
-}

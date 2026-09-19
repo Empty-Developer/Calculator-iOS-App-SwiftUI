@@ -1,11 +1,4 @@
-//
-//  ModelSymbols.swift
-//  Calculator
-//
-//  Created by Valera on 18.09.2026.
-//
-
-import Foundation
+import SwiftUI
 
 enum ModelSymbols: String {
     case zero = "0"
@@ -27,4 +20,17 @@ enum ModelSymbols: String {
     case percent = "%"
     case negative = "+/-"
     case clear = "AC"
+    
+    var symbolsColor: Color {
+        switch self {
+        case .clear, .negative, .percent:
+            return Color.appSpecialSymble
+        case .divide, .multiple, .minus, .plus, .equal:
+            return Color.appSymble
+        default:
+            return Color.appNumber
+        }
+    }
 }
+
+
